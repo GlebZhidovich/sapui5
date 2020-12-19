@@ -5,6 +5,8 @@ sap.ui.define([
         'use strict'
 
         return Controller.extend('sap.ui.demo.walkthrough', {
-
+            onOpenDialog: function () {
+                this.getOwnerComponent().openCustomDialog()
+            }
         })
     })

@@ -1,8 +1,9 @@
 sap.ui.define([
         'sap/ui/core/mvc/Controller',
         'sap/m/MessageToast',
+        'sap/ui/core/Fragment',
     ],
-    function (Controller, MessageToast) {
+    function (Controller, MessageToast, Fragment) {
         'use strict'
 
         return Controller.extend('sap.ui.demo.walkthrough.controller.CustomPanel', {
@@ -12,6 +13,9 @@ sap.ui.define([
                 const sMsg = oBundle.getText('helloMsg', [sRecipient])
 
                 MessageToast.show(sMsg);
-            }
+            },
+            onOpenDialog: function () {
+                this.getOwnerComponent().openCustomDialog();
+            },
         })
     })
