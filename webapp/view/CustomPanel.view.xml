@@ -1,0 +1,20 @@
+<mvc:View
+        controllerName="sap.ui.demo.walkthrough.controller.CustomPanel"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+>
+    <Panel headerText="{i18n>homePanelTitle}"
+    >
+        <content>
+            <Button text="{i18n>showHelloButtonText}"
+                    press=".onShowHello"
+                    class="sapMBtn"/>
+            <Input value="{/recipient/name}"
+                   description="Hello {/recipient/name}"
+                   valueLiveUpdate="true"
+                   width="60%"/>
+            <Text text="Hello {/recipient/name}"
+                  class="sapUiSmallMargin"/>
+        </content>
+    </Panel>
+</mvc:View>
